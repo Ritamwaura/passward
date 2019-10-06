@@ -19,6 +19,13 @@ def authenticate_user(us_name,pwd):
     '''
     authenticate_user=credentials.confirm_User(us_name,pwd)
     return authenticate_user
+def creat_credential(account_Name,user_name,user_password):
+    """
+    Function to creat a new Credentials
+    """
+    new_credential=credentials.(
+        account_Name,user_name,user_password)
+    return new_credential
 
-        
+    )        
     
