@@ -27,5 +27,10 @@ def creat_credential(account_Name,user_name,user_password):
         account_Name,user_name,user_password)
     return new_credential
 
-    )        
+def save_credential(password_locker):
+    """
+    Function to save credentials
+    """
+    password_locker.delete_account()
+         
     
