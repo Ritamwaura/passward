@@ -10,3 +10,7 @@ def creat_user(user_name,password):
         return new_User
 def save_New_User(user_name):
     '''    
+    This function update our users_list with anew user
+    '''
+    User.user_list.append(user_name)
+    
