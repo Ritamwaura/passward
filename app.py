@@ -49,6 +49,8 @@ def generate_Password():
         '''
         auto_Generic_Password=Credentials.generate_Password()
         return auto_Generic_Password
-
+def main():
+    print("Hello Welcome to your Credentials list.Create An Account : CA or Already Have An Account LI? :")
+    short_code=input("CA , LI").lower()
 
 
