@@ -26,3 +26,13 @@ class Users:
         """
 
         credentials_list = []  # Empty credentials list
+        @classmethod
+        def confirm_User(cls,u_Name, pswd):
+            '''Created a function to confirm 
+        whether the active user is in our users list or not
+        '''
+        active_user = ''
+        for user in Users.users_list:
+            if(user.u_Name == u_Name and user.pswd == pswd):
+                    active_user == user.u_Name
+        return active_user
