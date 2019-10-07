@@ -19,3 +19,10 @@ class Users:
         save_user method saves users in our class Users inside the users_list
         '''
         Users.users_list.append(self)
+  class Credentials:
+    
+        """
+        Class that generates new instances of the credentials for the various accounts.
+        """
+
+        credentials_list = []  # Empty credentials list
