@@ -25,7 +25,7 @@ def save_credential(self):
     '''
 
 @classmethod
-def generate_password(cls):
+def generate_password(cls):  
     '''
     Method that generates a random alphanumeric password
     '''
