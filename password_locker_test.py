@@ -35,7 +35,7 @@ class TestUser(unittest.TestCase):
                 "Linkedin", "", "britney3755")  # new credential
             test_credential.save_account()
             self.assertEqual(len(Credentials.credentials_list), 2)   
-             def test_delete_account(self):
+    def test_delete_account(self):
                 '''
             test_delete_account to test if we can remove a credential from our Credentials list
             '''
@@ -43,4 +43,19 @@ class TestUser(unittest.TestCase):
             test_credential = Credentials("Linkedin", "Rita mwaura", "britney3755")  # new credential
             test_credential.save_account()
             self.new_credential.delete_account()  # Deleting a credential object
-            self.assertEqual(len(Credentials.credentials_list), 1)            
+            self.assertEqual(len(Credentials.credentials_list), 1)  
+    def test_search_credential(self):
+                '''
+            test to check if we can find a credential by account_name and display credentials information
+            '''
+
+            self.new_credential.save_account()
+            test_credential = Credentials(
+                "Linkedin", "Rita mwaura", "britney3755")  # new credential
+            test_credential.save_account()
+
+            found_credential = Credentials.search_credential("Linkedin")
+
+            self.assertEqual(found_credential.account_name,
+                             test_credential.account_name) 
+                     
