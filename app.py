@@ -56,6 +56,17 @@ if short_code == 'ca':
         uName=input("Enter Your prefered username").capitalize()
         pswd = input("Enter Your Password As Well")
         save_New_User(create_user(uName,pswd))
+    elif short_code == 'li' :   
         
+        user_name=input("Enter UserName").capitalize()
+        password=input("Paste Password")
+        validate_user=(authenticate_User(user_name,password))
+        
+    if validate_user == user_name:
+            print(f"Hello {user_name}.Welcome To PassWord Locker Manager")  
+            print('\n')
+            print("what would you like to do?")
+            print('\n')
+                
 
 
