@@ -69,4 +69,11 @@ class TestUser(unittest.TestCase):
 
             credential_exists = Credentials.credential_exist("Linkedin")
 
-            self.assertTrue(credential_exists)               
+            self.assertTrue(credential_exists) 
+   def test_display_credentials(self):
+            '''
+        Test to confrim that we can actually display credential(s) from credentials_list
+        that the user has and all the information.i.e account name username(S) and password(s)
+        '''
+        self.assertEqual(Credentials.display_credentials(),
+                         Credentials.credentials_list)              
