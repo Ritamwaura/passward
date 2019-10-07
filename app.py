@@ -32,5 +32,8 @@ def save_credential(password_locker):
     Function to save credentials
     """
     password_locker.delete_account()
-         
-    
+ def find_credential(account_Name):
+     """
+     function that find credential by account name and return credential
+     """        
+    return credentials.credential_exist(account_Name)
