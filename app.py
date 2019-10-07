@@ -43,4 +43,12 @@ def copy_password(account_Name):
     We import the framework then declare a function that copies the emails.
     """
     Credentials.copy_password(account_Name)
+def generate_Password():
+        '''
+        generates a 9 digit randomn password
+        '''
+        auto_Generic_Password=Credentials.generate_Password()
+        return auto_Generic_Password
+
+
 
