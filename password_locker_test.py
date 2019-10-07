@@ -85,4 +85,15 @@ class TestUser(unittest.TestCase):
         self.new_credential.save_account()
         Credentials.copy_password("Linkedin")
         self.assertEqual(self.new_credential.password, pyperclip.paste())
-                   
+    def test_generate_Password(self):
+            '''
+        Test to confirm that we can copy the password from a found credential
+        so that we can paste it upon login into the respective account.
+        '''
+        self.new_credential.save_account()
+        Credentials.copy_password("Linkedin")
+        self.assertEqual(self.new_credential.password, pyperclip.paste())
+               
+if __name__ == '__main__':
+    unittest.main()
+        
