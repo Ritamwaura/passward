@@ -36,4 +36,11 @@ def save_credential(password_locker):
      """
      function that find credential by account name and return credential
      """        
-    return credentials.credential_exist(account_Name)
+
+def copy_password(account_Name):
+       """
+    A funct that copies the password using the pyperclip framework
+    We import the framework then declare a function that copies the emails.
+    """
+    Credentials.copy_password(account_Name)
+
