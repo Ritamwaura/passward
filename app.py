@@ -52,5 +52,10 @@ def generate_Password():
 def main():
     print("Hello Welcome to your Credentials list.Create An Account : CA or Already Have An Account LI? :")
     short_code=input("CA , LI").lower()
+if short_code == 'ca':
+        uName=input("Enter Your prefered username").capitalize()
+        pswd = input("Enter Your Password As Well")
+        save_New_User(create_user(uName,pswd))
+        
 
 
