@@ -70,10 +70,19 @@ class TestUser(unittest.TestCase):
             credential_exists = Credentials.credential_exist("Linkedin")
 
             self.assertTrue(credential_exists) 
-   def test_display_credentials(self):
+    def test_display_credentials(self):
             '''
         Test to confrim that we can actually display credential(s) from credentials_list
         that the user has and all the information.i.e account name username(S) and password(s)
         '''
         self.assertEqual(Credentials.display_credentials(),
-                         Credentials.credentials_list)              
+                         Credentials.credentials_list)   
+    def test_copy_password(self):
+            '''
+        Test to confirm that we can copy the password from a found credential
+        so that we can paste it upon login into the respective account.
+        '''
+        self.new_credential.save_account()
+        Credentials.copy_password("Linkedin")
+        self.assertEqual(self.new_credential.password, pyperclip.paste())
+                   
