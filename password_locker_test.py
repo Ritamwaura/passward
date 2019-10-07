@@ -58,4 +58,15 @@ class TestUser(unittest.TestCase):
 
             self.assertEqual(found_credential.account_name,
                              test_credential.account_name) 
-                     
+    def test_credential_exist(self):
+            '''
+            test to check if we can return a Boolean  if we cannot find the credential.
+            '''
+            self.new_credential.save_account()
+            test_credential = Credentials(
+                "Linkedin", "Rita mwaura", "britney3755")  # new credential
+            test_credential.save_account()
+
+            credential_exists = Credentials.credential_exist("Linkedin")
+
+            self.assertTrue(credential_exists)               
