@@ -37,7 +37,7 @@ class TestUser(unittest.TestCase):
             self.assertEqual(len(Credentials.credentials_list), 2)   
              def test_delete_account(self):
                 '''
-            #test_delete_account to test if we can remove a credential from our Credentials list
+            test_delete_account to test if we can remove a credential from our Credentials list
             '''
             self.new_credential.save_account()
             test_credential = Credentials("Linkedin", "Rita mwaura", "britney3755")  # new credential
